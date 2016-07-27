@@ -52,11 +52,11 @@ Return one product
 
     curl http://api.it-beaute.com/products/1
 
-Create one product
+Create one product [FAIL]
 
     curl -X POST -d "category_id=1,3" http://api.it-beaute.com/products
 
-Update one product
+Update one product [FAIL]
 
     curl -X PUT -d "category_id=1,3,5" http://api.it-beaute.com/products/1
 
