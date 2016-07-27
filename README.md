@@ -12,11 +12,11 @@ Return all categories within one parent category
 
 Return all categories with pagination
 
-    curl http://api.it-beaute.com/categories?page=1&perPage=30
+    curl -g http://api.it-beaute.com/categories?page=1&perPage=30
 
 Return all categories sorted
 
-    curl http://api.it-beaute.com/categories?sort[parent_category_id]=asc
+    curl -g http://api.it-beaute.com/categories?sort[parent_category_id]=asc
 
 Return one category
 
@@ -24,11 +24,11 @@ Return one category
 
 Create one category
 
-    curl -X POST -d -H 'Content-Type: application/json' "{'parent_category_id': '1'}" http://api.it-beaute.com/categories
+    curl -X POST -H 'Content-Type: application/json' -d '{"parent_category_id": "1"}' http://api.it-beaute.com/categories
 
 Update one category
 
-    curl -X PUT -d -H 'Content-Type: application/json' "{'parent_category_id': '2'}" http://api.it-beaute.com/categories/15
+    curl -X PUT -H 'Content-Type: application/json' -d '{"parent_category_id": "2"}' http://api.it-beaute.com/categories/15
 
 Delete one category
 
@@ -42,11 +42,11 @@ Return all products
 
 Return all products in one category
 
-    curl http://api.it-beaute.com/products?filter[category_id]=1
+    curl -g http://api.it-beaute.com/products?filter[category_id]=1
 
 Return all products in multiple category
 
-    curl http://api.it-beaute.com/products?filter[category_id]=in(1,3,5)
+    curl -g 'http://api.it-beaute.com/products?filter[category_id]=in(1,3,5)'
 
 Return one product
 
@@ -54,11 +54,11 @@ Return one product
 
 Create one product
 
-    curl -X POST -d -H 'Content-Type: application/json' "category_id=1,3" http://api.it-beaute.com/products
+    curl -X POST -H 'Content-Type: application/json' -d '{"category_id": "1,3"}' http://api.it-beaute.com/products
 
 Update one product [FAIL]
 
-    curl -X PUT -d -H 'Content-Type: application/json' "category_id=1,3,5" http://api.it-beaute.com/products/1
+    curl -X PUT -H 'Content-Type: application/json' -d '{"category_id": "1,2,3"}' http://api.it-beaute.com/products/6
 
 Delete one product [FAIL]
 
