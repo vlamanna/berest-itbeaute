@@ -52,7 +52,7 @@ Return one product
 
     curl http://api.it-beaute.com/products/1
 
-Create one product [FAIL]
+Create one product
 
     curl -X POST -d -H 'Content-Type: application/json' "category_id=1,3" http://api.it-beaute.com/products
 
