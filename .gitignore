@@ -1,0 +1,5 @@
+vendors/
+composer.lock
+API.phar
+.DS_Store
+.vagrant
