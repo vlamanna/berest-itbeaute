@@ -56,10 +56,10 @@ Create one product
 
     curl -X POST -H 'Content-Type: application/json' -d '{"category_id": "1,3"}' http://api.it-beaute.com/products
 
-Update one product [FAIL]
+Update one product
 
     curl -X PUT -H 'Content-Type: application/json' -d '{"category_id": "1,2,3"}' http://api.it-beaute.com/products/6
 
-Delete one product [FAIL]
+Delete one product
 
     curl -X DELETE http://api.it-beaute.com/products/1
