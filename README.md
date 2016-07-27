@@ -9,6 +9,7 @@ Return all categories within one parent category
 curl -g http://api.it-beaute.com/categories?filter[parent_category_id]=1
 
 Return all categories with pagination
+
     curl http://api.it-beaute.com/categories?page=1&perPage=30
 
 Return all categories sorted
