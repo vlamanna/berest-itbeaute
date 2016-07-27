@@ -3,49 +3,63 @@
 ## Categories
 
 Return all categories
-curl http://api.it-beaute.com/categories
+
+    curl http://api.it-beaute.com/categories
 
 Return all categories within one parent category
-curl -g http://api.it-beaute.com/categories?filter[parent_category_id]=1
+
+    curl -g http://api.it-beaute.com/categories?filter[parent_category_id]=1
 
 Return all categories with pagination
 
     curl http://api.it-beaute.com/categories?page=1&perPage=30
 
 Return all categories sorted
-curl http://api.it-beaute.com/categories?sort[parent_category_id]=asc
+
+    curl http://api.it-beaute.com/categories?sort[parent_category_id]=asc
 
 Return one category
-curl http://api.it-beaute.com/categories/1
+
+    curl http://api.it-beaute.com/categories/1
 
 Create one category
-curl -X POST -d "{'parent_category_id': '1'}" http://api.it-beaute.com/categories
+
+    curl -X POST -d "{'parent_category_id': '1'}" http://api.it-beaute.com/categories
 
 Update one category
-curl -X PUT -d "{'parent_category_id': '2'}" http://api.it-beaute.com/categories/15
+
+    curl -X PUT -d "{'parent_category_id': '2'}" http://api.it-beaute.com/categories/15
 
 Delete one category
-curl -X DELETE http://api.it-beaute.com/categories/15
+
+    curl -X DELETE http://api.it-beaute.com/categories/15
 
 ## Products
 
 Return all products
-curl http://api.it-beaute.com/products
+
+    curl http://api.it-beaute.com/products
 
 Return all products in one category
-curl http://api.it-beaute.com/products?filter[category_id]=1
+
+    curl http://api.it-beaute.com/products?filter[category_id]=1
 
 Return all products in multiple category
-curl http://api.it-beaute.com/products?filter[category_id]=in(1,3,5)
+
+    curl http://api.it-beaute.com/products?filter[category_id]=in(1,3,5)
 
 Return one product
-curl http://api.it-beaute.com/products/1
+
+    curl http://api.it-beaute.com/products/1
 
 Create one product
-curl -X POST -d "category_id=1,3" http://api.it-beaute.com/products
+
+    curl -X POST -d "category_id=1,3" http://api.it-beaute.com/products
 
 Update one product
-curl -X PUT -d "category_id=1,3,5" http://api.it-beaute.com/products/1
+
+    curl -X PUT -d "category_id=1,3,5" http://api.it-beaute.com/products/1
 
 Delete one product
-curl -X DELETE http://api.it-beaute.com/products/1
+
+    curl -X DELETE http://api.it-beaute.com/products/1
