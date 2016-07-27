@@ -24,11 +24,11 @@ Return one category
 
 Create one category
 
-    curl -X POST -d "{'parent_category_id': '1'}" http://api.it-beaute.com/categories
+    curl -X POST -d -H 'Content-Type: application/json' "{'parent_category_id': '1'}" http://api.it-beaute.com/categories
 
 Update one category
 
-    curl -X PUT -d "{'parent_category_id': '2'}" http://api.it-beaute.com/categories/15
+    curl -X PUT -d -H 'Content-Type: application/json' "{'parent_category_id': '2'}" http://api.it-beaute.com/categories/15
 
 Delete one category
 
@@ -54,11 +54,11 @@ Return one product
 
 Create one product [FAIL]
 
-    curl -X POST -d "category_id=1,3" http://api.it-beaute.com/products
+    curl -X POST -d -H 'Content-Type: application/json' "category_id=1,3" http://api.it-beaute.com/products
 
 Update one product [FAIL]
 
-    curl -X PUT -d "category_id=1,3,5" http://api.it-beaute.com/products/1
+    curl -X PUT -d -H 'Content-Type: application/json' "category_id=1,3,5" http://api.it-beaute.com/products/1
 
 Delete one product [FAIL]
 
